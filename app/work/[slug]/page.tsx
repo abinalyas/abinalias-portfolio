@@ -22,14 +22,16 @@ export default function CaseStudyPage({ params }: PageProps) {
 
   return (
     <article className="section container">
-      <Link href="/work" className="kicker">
+      <Link href="/work" className="kicker" data-page-kicker>
         Back to work
       </Link>
-      <h1 className="title-md mt-6">{study.title}</h1>
-      <p className="mt-4 text-sm uppercase tracking-[0.08em] text-muted">
+      <h1 className="title-md mt-6" data-page-title>
+        {study.title}
+      </h1>
+      <p className="mt-4 text-sm uppercase tracking-[0.08em] text-muted" data-page-body>
         {study.role} · {study.year}
       </p>
-      <div className="mt-8">
+      <div className="mt-8 overflow-hidden rounded-lg" data-card-reveal>
         <Image
           src={study.image}
           alt={study.title}
@@ -39,7 +41,7 @@ export default function CaseStudyPage({ params }: PageProps) {
         />
       </div>
 
-      <div className="mt-10 grid gap-10 md:grid-cols-[2fr_1fr]">
+      <div className="mt-10 grid gap-10 md:grid-cols-[2fr_1fr]" data-page-body>
         <div className="space-y-8">
           <section>
             <h2 className="text-xl font-semibold">Summary</h2>
