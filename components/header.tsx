@@ -12,9 +12,10 @@ const links = [
 
 export function Header() {
   const pathname = usePathname();
+  const isHome = pathname === '/';
 
   return (
-    <header className="container py-8 sm:py-10">
+    <header className={`container py-8 sm:py-10 ${isHome ? 'header-home' : ''}`}>
       <div className="flex items-center justify-between gap-8">
         <Link href="/" className="font-display text-lg tracking-tight">
           ABIN ALIAS

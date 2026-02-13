@@ -105,6 +105,188 @@ main {
   z-index: 2;
 }
 
+.header-home {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.header-home .nav-link::after {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.landing-hero {
+  position: relative;
+  min-height: 100svh;
+  background: #a9abad;
+  overflow: hidden;
+  border-top: 4px solid #223c2f;
+}
+
+.landing-top {
+  position: relative;
+  z-index: 3;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing-kicker {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.landing-photo-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(52vw, 760px);
+  height: min(86vh, 980px);
+  z-index: 2;
+}
+
+.landing-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.landing-meta {
+  position: absolute;
+  z-index: 3;
+  right: min(16vw, 16rem);
+  top: 38%;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1.9rem, 3vw, 3.6rem);
+  line-height: 1.08;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+}
+
+.landing-meta p {
+  margin: 0;
+}
+
+.landing-arrow {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.landing-name {
+  position: absolute;
+  left: -0.02em;
+  right: -0.02em;
+  bottom: -0.04em;
+  z-index: 3;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(3.6rem, 16vw, 21rem);
+  letter-spacing: -0.045em;
+  color: #f3f3f3;
+  line-height: 0.82;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.work-hover-shell {
+  cursor: none;
+}
+
+.work-hover-list {
+  border-top: 1px solid #d7d3cb;
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #d7d3cb;
+  padding: clamp(1.25rem, 2vw, 2rem) 0;
+}
+
+.work-row h2 {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 5vw, 5.2rem);
+  letter-spacing: -0.03em;
+  color: #1b1b1b;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.work-row p {
+  margin: 0;
+  color: #4b4a49;
+  transition: opacity 0.25s ease;
+}
+
+.work-row[data-active="true"] h2 {
+  color: #111111;
+}
+
+.hover-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 45;
+  width: 18rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.hover-preview[data-visible="true"] {
+  opacity: 1;
+}
+
+.hover-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d7d3cb;
+}
+
+.hover-preview-pill {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 999px;
+  background: #3f50ff;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 17, 17, 0.55);
+  pointer-events: none;
+  z-index: 50;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-cursor[data-active="true"] {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-color: #111111;
+  background: rgba(17, 17, 17, 0.08);
+}
+
 .section {
   padding: clamp(3rem, 6vw, 6rem) 0;
 }
@@ -219,5 +401,46 @@ main {
   .preloader,
   .route-wipe {
     display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-top {
+    justify-content: flex-start;
+  }
+
+  .landing-photo-wrap {
+    width: min(90vw, 470px);
+    height: min(62vh, 580px);
+  }
+
+  .landing-meta {
+    right: auto;
+    left: 1.25rem;
+    top: auto;
+    bottom: 20vh;
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .landing-name {
+    white-space: normal;
+    line-height: 0.9;
+    font-size: clamp(3rem, 17vw, 5.8rem);
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.3rem;
+  }
+
+  .work-hover-shell {
+    cursor: auto;
+  }
+
+  .hover-preview,
+  .custom-cursor {
+    display: none;
+  }
+
+  .work-row {
+    grid-template-columns: 1fr;
   }
 }
