@@ -192,6 +192,11 @@ main {
   pointer-events: none;
 }
 
+.landing-name span {
+  display: inline-block;
+  will-change: transform;
+}
+
 .work-hover-shell {
   cursor: none;
 }
@@ -228,6 +233,11 @@ main {
   color: #111111;
 }
 
+.work-row[data-dim="true"] h2,
+.work-row[data-dim="true"] p {
+  opacity: 0.28;
+}
+
 .hover-preview {
   position: fixed;
   top: 0;
@@ -238,7 +248,8 @@ main {
   overflow: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.18s ease;
+  transition: opacity 0.2s ease;
+  will-change: transform, opacity;
 }
 
 .hover-preview[data-visible="true"] {
@@ -265,6 +276,12 @@ main {
   display: grid;
   place-items: center;
   font-size: 1rem;
+  transform: translate(-50%, -50%) scale(0.85);
+  transition: transform 0.22s ease;
+}
+
+.hover-preview[data-visible="true"] .hover-preview-pill {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .custom-cursor {
@@ -277,14 +294,31 @@ main {
   border: 1px solid rgba(17, 17, 17, 0.55);
   pointer-events: none;
   z-index: 50;
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  display: grid;
+  place-items: center;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: #111111;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-cursor span {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .custom-cursor[data-active="true"] {
-  width: 2.7rem;
-  height: 2.7rem;
-  border-color: #111111;
-  background: rgba(17, 17, 17, 0.08);
+  width: 3.1rem;
+  height: 3.1rem;
+  border-color: #3f50ff;
+  background: rgba(63, 80, 255, 0.15);
+  color: #2f3fe0;
+}
+
+.custom-cursor[data-active="true"] span {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .section {
