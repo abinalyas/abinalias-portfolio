@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { caseStudies, findCaseStudy } from '@/lib/case-studies';
 
 type PageProps = {
@@ -28,6 +29,15 @@ export default function CaseStudyPage({ params }: PageProps) {
       <p className="mt-4 text-sm uppercase tracking-[0.08em] text-muted">
         {study.role} · {study.year}
       </p>
+      <div className="mt-8">
+        <Image
+          src={study.image}
+          alt={study.title}
+          width={1200}
+          height={800}
+          className="h-auto w-full rounded-lg border border-line object-cover"
+        />
+      </div>
 
       <div className="mt-10 grid gap-10 md:grid-cols-[2fr_1fr]">
         <div className="space-y-8">
@@ -58,6 +68,9 @@ export default function CaseStudyPage({ params }: PageProps) {
               ))}
             </ul>
           </div>
+          <a href={study.archiveUrl} target="_blank" rel="noreferrer" className="nav-link inline-block">
+            View archived case study
+          </a>
           {study.link ? (
             <a href={study.link} target="_blank" rel="noreferrer" className="nav-link inline-block">
               Visit live project

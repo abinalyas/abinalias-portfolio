@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Reveal } from '@/components/reveal';
 import { caseStudies } from '@/lib/case-studies';
 
@@ -33,8 +34,15 @@ export default function HomePage() {
           {caseStudies.map((study, index) => (
             <Reveal key={study.slug} delay={0.06 * index}>
               <Link href={`/work/${study.slug}`} className="card">
-                <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
-                  <div>
+                <div className="grid gap-4 sm:grid-cols-[180px_1fr_auto] sm:items-start">
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    width={180}
+                    height={130}
+                    className="h-28 w-full rounded-md border border-line object-cover sm:h-[130px] sm:w-[180px]"
+                  />
+                  <div className="min-w-0">
                     <h3>{study.title}</h3>
                     <p>{study.summary}</p>
                   </div>

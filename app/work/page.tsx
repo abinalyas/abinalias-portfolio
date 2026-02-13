@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { caseStudies } from '@/lib/case-studies';
 
 export default function WorkPage() {
@@ -11,10 +12,17 @@ export default function WorkPage() {
       <div className="mt-12">
         {caseStudies.map((study) => (
           <Link href={`/work/${study.slug}`} key={study.slug} className="card">
-            <div className="grid gap-1 sm:grid-cols-[1fr_auto] sm:items-start">
-              <div>
+            <div className="grid gap-4 sm:grid-cols-[200px_1fr_auto] sm:items-start">
+              <Image
+                src={study.image}
+                alt={study.title}
+                width={200}
+                height={148}
+                className="h-32 w-full rounded-md border border-line object-cover sm:h-[148px] sm:w-[200px]"
+              />
+              <div className="min-w-0">
                 <h2 className="text-2xl font-medium tracking-tight">{study.title}</h2>
-                <p>{study.role}</p>
+                <p>{study.role} · {study.category}</p>
               </div>
               <p className="text-sm text-muted">{study.year}</p>
             </div>
