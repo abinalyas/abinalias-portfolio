@@ -6,7 +6,10 @@ export default function ContactPage() {
       <div className="container contact-page-grid">
         <div className="contact-form-side">
           <div className="contact-hero" data-page-title>
-            <h1>Let&apos;s start a project together</h1>
+            <h1>
+              <span>Let&apos;s start a</span>
+              <span>project together</span>
+            </h1>
           </div>
 
           <form className="contact-form" action="#" method="post">

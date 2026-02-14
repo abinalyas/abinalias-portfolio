@@ -11,8 +11,9 @@ const links = [
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
-  const isContact = pathname === '/contact';
+  const normalizedPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+  const isHome = normalizedPath === '/';
+  const isContact = normalizedPath === '/contact';
 
   return (
     <header className={`container py-8 sm:py-10 ${isHome ? 'header-home' : ''} ${isContact ? 'header-dark' : ''}`}>

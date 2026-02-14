@@ -121,8 +121,11 @@ main {
 .header-dark {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  width: calc(100% - 4rem);
+  margin-inline: 2rem;
+  transform: none;
   z-index: 20;
   color: rgba(241, 244, 250, 0.92);
 }
@@ -730,12 +733,16 @@ main {
 
 .contact-hero h1 {
   margin: 0;
-  max-width: 8ch;
+  max-width: 12.5ch;
   font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
   font-size: clamp(2.8rem, 7.2vw, 8rem);
   line-height: 0.94;
   letter-spacing: -0.03em;
   color: #f4f6fb;
+}
+
+.contact-hero h1 span {
+  display: block;
 }
 
 .contact-hero-avatar {
@@ -831,7 +838,7 @@ main {
   flex-direction: column;
   gap: 2.1rem;
   align-content: start;
-  padding-top: 0.4rem;
+  padding-top: 0;
 }
 
 .contact-side-avatar {
@@ -1097,6 +1104,11 @@ main {
 
   .contact-page-grid {
     grid-template-columns: 1fr;
+  }
+
+  .header-dark {
+    width: calc(100% - 2rem);
+    margin-inline: 1rem;
   }
 
   .contact-page-cols {

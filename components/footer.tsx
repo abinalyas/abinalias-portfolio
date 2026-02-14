@@ -4,7 +4,8 @@ import { usePathname } from 'next/navigation';
 
 export function Footer() {
   const pathname = usePathname();
-  if (pathname === '/' || pathname === '/about' || pathname === '/contact') {
+  const normalizedPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+  if (normalizedPath === '/' || normalizedPath === '/about' || normalizedPath === '/contact') {
     return null;
   }
 
