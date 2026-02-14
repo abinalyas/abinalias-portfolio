@@ -54,49 +54,51 @@ export function WorkHoverList({
   }, []);
 
   return (
-    <section className="section container work-hover-shell" onMouseMove={handleMove}>
-      {showHeading ? (
-        <>
-          <span className="kicker" data-page-kicker>
+    <section className="section work-hover-shell" onMouseMove={handleMove}>
+      <div className="container">
+        {showHeading ? (
+          <>
+            <span className="kicker" data-page-kicker>
+              {label}
+            </span>
+            <h1 className="title-md mt-6" data-page-title>
+              {title}
+            </h1>
+          </>
+        ) : (
+          <p className="work-label" data-page-kicker>
             {label}
-          </span>
-          <h1 className="title-md mt-6" data-page-title>
-            {title}
-          </h1>
-        </>
-      ) : (
-        <p className="work-label" data-page-kicker>
-          {label}
-        </p>
-      )}
+          </p>
+        )}
 
-      <div className={`work-hover-list ${showHeading ? 'mt-10' : 'mt-4'}`} onMouseLeave={() => setActiveSlug(null)}>
-        {studies.map((study) => {
-          const isActive = activeSlug === study.slug;
-          return (
-            <Link
-              key={study.slug}
-              href={`/work/${study.slug}`}
-              className="work-row"
-              data-active={isActive}
-              data-dim={Boolean(activeSlug) && !isActive}
-              onMouseEnter={() => setActiveSlug(study.slug)}
-            >
-              <h2>{study.title}</h2>
-              <p>
-                {study.role} · {study.category}
-              </p>
-            </Link>
-          );
-        })}
-      </div>
-      {showMoreButton ? (
-        <div className="work-more-wrap">
-          <Link href="/work" className="work-more-btn" data-page-body>
-            More work
-          </Link>
+        <div className={`work-hover-list ${showHeading ? 'mt-10' : 'mt-4'}`} onMouseLeave={() => setActiveSlug(null)}>
+          {studies.map((study) => {
+            const isActive = activeSlug === study.slug;
+            return (
+              <Link
+                key={study.slug}
+                href={`/work/${study.slug}`}
+                className="work-row"
+                data-active={isActive}
+                data-dim={Boolean(activeSlug) && !isActive}
+                onMouseEnter={() => setActiveSlug(study.slug)}
+              >
+                <h2>{study.title}</h2>
+                <p>
+                  {study.role} · {study.category}
+                </p>
+              </Link>
+            );
+          })}
         </div>
-      ) : null}
+        {showMoreButton ? (
+          <div className="work-more-wrap">
+            <Link href="/work" className="work-more-btn" data-page-body>
+              More work
+            </Link>
+          </div>
+        ) : null}
+      </div>
 
       <div
         className="hover-preview"
