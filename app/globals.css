@@ -511,6 +511,12 @@ main {
   letter-spacing: -0.035em;
 }
 
+.about-hero-sub {
+  margin: 1rem 0 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.7rem);
+  color: #555;
+}
+
 .about-profile {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
@@ -537,6 +543,25 @@ main {
   max-width: 45ch;
   color: #4f4f4f;
   line-height: 1.7;
+}
+
+.about-quote {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.about-quote h2 {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(1.9rem, 3.8vw, 3.6rem);
+  letter-spacing: -0.02em;
+}
+
+.about-quote p {
+  margin: 1rem auto 0;
+  max-width: 65ch;
+  color: #4f4f4f;
+  line-height: 1.8;
 }
 
 .impact-section {

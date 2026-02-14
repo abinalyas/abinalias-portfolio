@@ -8,18 +8,38 @@ export default function AboutPage() {
           About
         </span>
         <h1 className="about-hero-title" data-page-title>
-          Helping brands thrive in the digital world through design, code, and interaction.
+          Abin Alias
         </h1>
+        <p className="about-hero-sub" data-page-body>
+          Entrepreneur, Designer and Builder
+        </p>
       </section>
 
       <section className="section container about-profile" data-page-body>
         <Image src="/hero/abin-portrait.png" alt="Abin Alias" width={760} height={980} className="about-profile-image" />
         <div className="about-profile-meta">
-          <h2>Awwwards Jury 19-25</h2>
+          <h2>Entrepreneur, Designer and Builder</h2>
           <p>
-            I’m a designer-developer focused on digital products that feel clear, intentional, and strong in motion.
+            A product person who always derive projects with the team. Collaborating with designers, managers and
+            developers to ensure we all thrive for the same goal with quality.
+          </p>
+          <p>
+            Always a human-centric approach. Building products around users needs is what I do. Mostly you will find
+            me being around the users, observing them, learning from them and crafting solutions.
+          </p>
+          <p>
+            I always love to learn. Let it be from a book, blog, videos or the people around me. As a designer, I
+            always tend to observe and learn. I believe growth comes with the urge of learning continuously.
           </p>
         </div>
+      </section>
+
+      <section className="section container about-quote" data-page-body>
+        <h2>Life is more fun with friends</h2>
+        <p>
+          “I am going to keep having fun every day I have left, because there is no other way of life. You just have
+          to decide whether you are a Tigger or an Eeyore.” — Randy Pausch
+        </p>
       </section>
 
       <section className="section container capabilities-section" data-page-body>
