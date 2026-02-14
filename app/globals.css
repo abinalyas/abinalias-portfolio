@@ -212,7 +212,7 @@ main {
 
 .landing-location p {
   margin: 0;
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   line-height: 1.05;
   letter-spacing: -0.01em;
 }
@@ -353,6 +353,60 @@ main {
 
 .section {
   padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+.manifesto-section {
+  background: #efefef;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 6vw, 9rem);
+  align-items: start;
+}
+
+.manifesto-title {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 5vw, 5.6rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #17191e;
+}
+
+.manifesto-kicker {
+  margin-top: clamp(2rem, 8vw, 11rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a8a8a;
+  font-size: 0.95rem;
+}
+
+.manifesto-aside p {
+  margin: 0;
+  font-size: clamp(1rem, 1.55vw, 2rem);
+  line-height: 1.58;
+  color: #20232a;
+}
+
+.manifesto-about {
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  width: clamp(10rem, 19vw, 17rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: #141922;
+  color: #f7f7f8;
+  display: grid;
+  place-items: center;
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  transition: transform 0.28s ease;
+}
+
+.manifesto-about:hover {
+  transform: scale(1.05);
 }
 
 .kicker {
@@ -522,6 +576,16 @@ main {
 
   .work-row {
     grid-template-columns: 1fr;
+  }
+
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .manifesto-about {
+    width: 9rem;
+    margin-top: 1.5rem;
   }
 }
 

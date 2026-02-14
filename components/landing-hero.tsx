@@ -11,7 +11,7 @@ export function LandingHero() {
           <br />
           in the
           <br />
-          United States
+          Netherlands
         </p>
         <span className="landing-location-icon" aria-hidden="true">
           ◎
