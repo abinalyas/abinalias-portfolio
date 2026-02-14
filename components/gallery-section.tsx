@@ -38,30 +38,30 @@ export function GallerySection() {
 
     const topTween = gsap.fromTo(
       top,
-      { xPercent: -6 },
+      { xPercent: -14 },
       {
-        xPercent: 6,
+        xPercent: 14,
         ease: 'none',
         scrollTrigger: {
           trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1.1
+          start: 'top 90%',
+          end: 'bottom 10%',
+          scrub: 1.35
         }
       }
     );
 
     const bottomTween = gsap.fromTo(
       bottom,
-      { xPercent: 6 },
+      { xPercent: 14 },
       {
-        xPercent: -6,
+        xPercent: -14,
         ease: 'none',
         scrollTrigger: {
           trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1.1
+          start: 'top 90%',
+          end: 'bottom 10%',
+          scrub: 1.35
         }
       }
     );

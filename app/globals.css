@@ -315,11 +315,11 @@ main {
 }
 
 .gallery-row-top {
-  transform: translateX(-4%);
+  transform: translateX(-10%);
 }
 
 .gallery-row-bottom {
-  transform: translateX(4%);
+  transform: translateX(10%);
 }
 
 .gallery-card {
