@@ -750,8 +750,8 @@ main {
 }
 
 .home-footer {
-  padding-top: calc(var(--section-padding) * 0.62);
-  padding-bottom: calc(var(--section-padding) * 0.58);
+  padding-top: calc(var(--section-padding) * 0.5);
+  padding-bottom: calc(var(--section-padding) * 0.5);
 }
 
 .home-footer::before {
@@ -766,28 +766,28 @@ main {
 
 .home-footer-wrap {
   display: grid;
-  gap: clamp(1.4rem, 2.6vw, 2.2rem);
+  gap: clamp(1.1rem, 2vw, 1.8rem);
 }
 
 .home-footer-head {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: clamp(1.5rem, 3vw, 2.6rem);
+  align-items: center;
+  gap: clamp(1.2rem, 2.4vw, 2.1rem);
 }
 
 .home-footer-title-row {
   display: flex;
   align-items: flex-start;
-  gap: clamp(1.1rem, 1.7vw, 1.8rem);
+  gap: clamp(0.9rem, 1.3vw, 1.35rem);
 }
 
 .home-footer-avatar {
-  width: clamp(3.8rem, 5.2vw, 5.8rem);
+  width: clamp(3.4rem, 4.6vw, 5rem);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   overflow: hidden;
-  margin-top: 0.45rem;
+  margin-top: 0.3rem;
 }
 
 .home-footer-avatar img {
@@ -798,27 +798,27 @@ main {
 
 .home-footer h2 {
   margin: 0;
-  max-width: 8ch;
-  font-size: clamp(3.6rem, 9.1vw, 8.7rem);
-  line-height: 0.9;
+  max-width: 8.5ch;
+  font-size: clamp(2.95rem, 7.5vw, 7.1rem);
+  line-height: 0.92;
   letter-spacing: -0.04em;
 }
 
 .home-footer-action {
   display: grid;
   justify-items: center;
-  gap: 1.2rem;
-  padding-bottom: 0.55rem;
+  gap: 1rem;
+  padding-bottom: 0.2rem;
 }
 
 .home-footer-arrow {
-  font-size: clamp(1.4rem, 2.1vw, 2.3rem);
+  font-size: clamp(1.3rem, 1.9vw, 2rem);
   line-height: 1;
   color: #edf1fb;
 }
 
 .home-footer-orb {
-  width: clamp(8.8rem, 12.3vw, 12.2rem);
+  width: clamp(8.2rem, 10.8vw, 11rem);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   background: #4a5eff;
@@ -835,6 +835,7 @@ main {
 
 .home-footer-divider {
   border-top: 1px solid rgba(139, 147, 167, 0.3);
+  margin-top: 0.15rem;
 }
 
 .home-footer-chips {
@@ -851,9 +852,9 @@ main {
   border: 1px solid rgba(139, 147, 167, 0.38);
   color: #eff2f7;
   border-radius: 999px;
-  min-height: 3.2rem;
-  padding: 0.7rem 1.8rem;
-  font-size: clamp(0.95rem, 1vw, 1.15rem);
+  min-height: 3rem;
+  padding: 0.62rem 1.7rem;
+  font-size: clamp(0.92rem, 0.95vw, 1.08rem);
 }
 
 .contact-page {
