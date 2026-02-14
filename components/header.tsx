@@ -16,8 +16,8 @@ export function Header() {
   const isContact = normalizedPath === '/contact';
 
   return (
-    <header className={`container py-8 sm:py-10 ${isHome ? 'header-home' : ''} ${isContact ? 'header-dark' : ''}`}>
-      <div className="flex items-center justify-between gap-8">
+    <header className={`site-header ${isHome ? 'header-home' : ''} ${isContact ? 'header-dark' : ''}`}>
+      <div className="site-header-inner">
         <Link href="/" className="font-display text-sm tracking-tight sm:text-base">
           © Code by Abin
         </Link>
@@ -27,7 +27,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className="nav-link text-sm sm:text-base"
-              data-active={pathname === link.href}
+              data-active={normalizedPath === link.href}
             >
               {link.label}
             </Link>
