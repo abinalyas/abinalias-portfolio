@@ -4,6 +4,9 @@
 
 :root {
   color-scheme: light;
+  --section-padding: clamp(5em, 21vh, 12em);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
 }
 
 * {
@@ -17,6 +20,7 @@ body {
   background: radial-gradient(circle at 5% 0%, #ffffff 0%, #f3f1ec 36%, #ece8df 100%);
   color: #111111;
   font-family: "Satoshi", "Manrope", sans-serif;
+  font-size: clamp(16px, 1.2vw, 19px);
 }
 
 body {
@@ -99,7 +103,10 @@ main {
 }
 
 .container {
-  width: min(1120px, 100% - 2.5rem);
+  width: 100%;
+  max-width: 100em;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin-inline: auto;
   position: relative;
   z-index: 2;
@@ -109,7 +116,7 @@ main {
   position: relative;
   z-index: 20;
   width: 100%;
-  padding: 2rem 2rem 0;
+  padding: calc(var(--gap-padding) * 0.66) var(--container-padding) 0;
 }
 
 .site-header-inner {
@@ -485,7 +492,7 @@ main {
 }
 
 .section {
-  padding: clamp(3rem, 6vw, 6rem) 0;
+  padding: calc(var(--section-padding) * 0.66) 0;
 }
 
 .manifesto-section {
@@ -722,19 +729,20 @@ main {
   min-height: 100svh;
   background: #151721;
   color: #eff2f7;
-  padding: clamp(7rem, 10vw, 10rem) 0 clamp(2.5rem, 5vw, 4.2rem);
+  padding: calc(var(--section-padding) * 0.8) 0 calc(var(--section-padding) * 0.28);
   overflow: hidden;
 }
 
 .contact-page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
-  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 73%) minmax(0, 27%);
+  gap: 0;
   align-items: start;
 }
 
 .contact-form-side {
   min-width: 0;
+  padding-right: calc(var(--container-padding) * 0.5);
 }
 
 .contact-hero {
@@ -851,6 +859,7 @@ main {
   gap: 2.1rem;
   align-content: start;
   padding-top: 0;
+  padding-left: calc(var(--container-padding) * 0.5);
 }
 
 .contact-side-avatar {
@@ -1017,6 +1026,19 @@ main {
   .preloader,
   .route-wipe {
     display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 6vw;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    --container-padding: clamp(1.25em, 4vw, 2.5em);
+    --section-padding: max(2.5em, 12vh);
   }
 }
 
