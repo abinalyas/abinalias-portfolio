@@ -7,9 +7,6 @@ export default function ContactPage() {
         <div className="contact-form-side">
           <div className="contact-hero" data-page-title>
             <h1>Let&apos;s start a project together</h1>
-            <div className="contact-hero-avatar" aria-hidden="true">
-              <Image src="/hero/abin-portrait.png" alt="" width={400} height={400} />
-            </div>
           </div>
 
           <form className="contact-form" action="#" method="post">
@@ -62,6 +59,9 @@ export default function ContactPage() {
         </div>
 
         <div className="contact-page-cols">
+          <div className="contact-side-avatar" aria-hidden="true">
+            <Image src="/hero/abin-portrait.png" alt="" width={400} height={400} />
+          </div>
           <span className="contact-arrow" aria-hidden="true">
             ↘
           </span>

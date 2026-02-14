@@ -119,6 +119,11 @@ main {
 }
 
 .header-dark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
   color: rgba(241, 244, 250, 0.92);
 }
 
@@ -719,10 +724,7 @@ main {
 }
 
 .contact-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 2rem;
+  display: block;
   margin-bottom: 2.4rem;
 }
 
@@ -832,6 +834,20 @@ main {
   padding-top: 0.4rem;
 }
 
+.contact-side-avatar {
+  width: clamp(5.7rem, 8.2vw, 8.5rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.contact-side-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .contact-page-cols h4 {
   margin: 0 0 0.8rem;
   text-transform: uppercase;
@@ -842,6 +858,7 @@ main {
 
 .contact-page-cols p,
 .contact-page-cols a {
+  display: block;
   margin: 0.45rem 0;
   color: #f1f3f7;
   line-height: 1.6;
