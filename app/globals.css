@@ -231,6 +231,14 @@ main {
   cursor: none;
 }
 
+.work-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.9rem;
+  color: #989898;
+}
+
 .work-hover-list {
   border-top: 1px solid #d7d3cb;
 }
@@ -266,6 +274,25 @@ main {
 .work-row[data-dim="true"] h2,
 .work-row[data-dim="true"] p {
   opacity: 0.28;
+}
+
+.work-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.work-more-btn {
+  border: 1px solid #cbcbcb;
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  color: #1a1a1a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.work-more-btn:hover {
+  background: #171922;
+  color: #f7f7f7;
 }
 
 .hover-preview {
@@ -407,6 +434,115 @@ main {
 
 .manifesto-about:hover {
   transform: scale(1.05);
+}
+
+.impact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.impact-title {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2.1rem, 5vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.impact-copy {
+  margin: 1.25rem 0 0;
+  max-width: 46ch;
+  color: #4e4e4e;
+  line-height: 1.7;
+}
+
+.impact-pill {
+  width: clamp(6rem, 10vw, 8.5rem);
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+  background: #3f50ff;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.capabilities-section {
+  padding-top: 1rem;
+}
+
+.cap-intro {
+  margin: 0;
+  color: #787878;
+}
+
+.cap-grid {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #d6d6d6;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.cap-grid h3 {
+  margin: 0 0 0.7rem;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: 1.45rem;
+}
+
+.cap-grid p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.contact-dark {
+  background: #121722;
+  color: #f1f3f7;
+  margin-top: 2rem;
+}
+
+.contact-dark-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-dark h2 {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4.7vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.contact-dark-mail {
+  display: inline-block;
+  margin-top: 1.7rem;
+  color: #d4d9e4;
+}
+
+.contact-dark-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-dark-cols h4 {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ba3b7;
+}
+
+.contact-dark-cols a {
+  display: block;
+  margin: 0.45rem 0;
+  color: #f1f3f7;
 }
 
 .kicker {
@@ -586,6 +722,18 @@ main {
   .manifesto-about {
     width: 9rem;
     margin-top: 1.5rem;
+  }
+
+  .impact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-dark-grid {
+    grid-template-columns: 1fr;
   }
 }
 

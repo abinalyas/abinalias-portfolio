@@ -7,9 +7,19 @@ import type { CaseStudy } from '@/lib/case-studies';
 
 type Props = {
   studies: CaseStudy[];
+  label?: string;
+  title?: string;
+  showHeading?: boolean;
+  showMoreButton?: boolean;
 };
 
-export function WorkHoverList({ studies }: Props) {
+export function WorkHoverList({
+  studies,
+  label = 'Work',
+  title = 'Selected projects',
+  showHeading = true,
+  showMoreButton = false
+}: Props) {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [preview, setPreview] = useState({ x: 0, y: 0 });
@@ -45,14 +55,22 @@ export function WorkHoverList({ studies }: Props) {
 
   return (
     <section className="section container work-hover-shell" onMouseMove={handleMove}>
-      <span className="kicker" data-page-kicker>
-        Work
-      </span>
-      <h1 className="title-md mt-6" data-page-title>
-        Selected projects
-      </h1>
+      {showHeading ? (
+        <>
+          <span className="kicker" data-page-kicker>
+            {label}
+          </span>
+          <h1 className="title-md mt-6" data-page-title>
+            {title}
+          </h1>
+        </>
+      ) : (
+        <p className="work-label" data-page-kicker>
+          {label}
+        </p>
+      )}
 
-      <div className="work-hover-list mt-10" onMouseLeave={() => setActiveSlug(null)}>
+      <div className={`work-hover-list ${showHeading ? 'mt-10' : 'mt-4'}`} onMouseLeave={() => setActiveSlug(null)}>
         {studies.map((study) => {
           const isActive = activeSlug === study.slug;
           return (
@@ -72,6 +90,13 @@ export function WorkHoverList({ studies }: Props) {
           );
         })}
       </div>
+      {showMoreButton ? (
+        <div className="work-more-wrap">
+          <Link href="/work" className="work-more-btn" data-page-body>
+            More work
+          </Link>
+        </div>
+      ) : null}
 
       <div
         className="hover-preview"
