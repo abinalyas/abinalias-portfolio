@@ -25,8 +25,8 @@ export default function HomePage() {
                 The combination of design, code, and interaction thinking positions your work in a unique place in
                 the digital world.
               </p>
-              <Link href="/about" className="manifesto-about">
-                About me
+              <Link href="/about" className="manifesto-about" data-magnetic data-strength="50" data-strength-text="25">
+                <span data-magnetic-text>About me</span>
               </Link>
             </aside>
           </div>

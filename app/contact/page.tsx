@@ -55,8 +55,8 @@ export default function ContactPage() {
           </form>
 
           <div className="contact-submit-wrap">
-            <button type="button" className="contact-submit-orb">
-              Send it!
+            <button type="button" className="contact-submit-orb" data-magnetic data-strength="100" data-strength-text="50">
+              <span data-magnetic-text>Send it!</span>
             </button>
           </div>
         </div>

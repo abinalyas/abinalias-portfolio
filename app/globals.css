@@ -407,6 +407,10 @@ main {
   animation: landing-marquee 18s linear infinite;
 }
 
+.landing-name-track.js-roll {
+  animation: none;
+}
+
 .landing-name-track span {
   display: inline-block;
   padding-right: 0.25em;
@@ -1022,6 +1026,15 @@ main {
 
 .home-footer-orb:hover {
   transform: scale(1.04);
+}
+
+[data-magnetic] {
+  will-change: transform;
+}
+
+[data-magnetic-text] {
+  display: inline-block;
+  will-change: transform;
 }
 
 .home-footer-divider {

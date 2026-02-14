@@ -57,18 +57,18 @@ export function HomeFooterSection() {
             <span className="home-footer-arrow" aria-hidden="true">
               ↙
             </span>
-            <Link href="/contact" className="home-footer-orb">
-              Get in touch
+            <Link href="/contact" className="home-footer-orb" data-magnetic data-strength="100" data-strength-text="50">
+              <span data-magnetic-text>Get in touch</span>
             </Link>
           </div>
         </div>
         <div className="home-footer-divider" />
         <div className="home-footer-chips">
-          <a href="mailto:hello@abinalias.com" className="home-footer-chip">
-            hello@abinalias.com
+          <a href="mailto:hello@abinalias.com" className="home-footer-chip" data-magnetic data-strength="25" data-strength-text="15">
+            <span data-magnetic-text>hello@abinalias.com</span>
           </a>
-          <a href="tel:+919999900000" className="home-footer-chip">
-            +91 99999 00000
+          <a href="tel:+919999900000" className="home-footer-chip" data-magnetic data-strength="25" data-strength-text="15">
+            <span data-magnetic-text>+91 99999 00000</span>
           </a>
         </div>
       </div>

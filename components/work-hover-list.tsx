@@ -95,8 +95,15 @@ export function WorkHoverList({
         </div>
         {showMoreButton ? (
           <div className="work-more-wrap">
-            <Link href="/work" className="work-more-btn" data-page-body>
-              More work
+            <Link
+              href="/work"
+              className="work-more-btn"
+              data-page-body
+              data-magnetic
+              data-strength="25"
+              data-strength-text="15"
+            >
+              <span data-magnetic-text>More work</span>
             </Link>
           </div>
         ) : null}

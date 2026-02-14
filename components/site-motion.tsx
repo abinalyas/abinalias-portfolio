@@ -58,6 +58,10 @@ export function SiteMotion() {
         );
     }
 
+    let landingRoll: HTMLElement | null = null;
+    let rollTween: gsap.core.Tween | null = null;
+    let rollDirectionTrigger: ScrollTrigger | null = null;
+
     if (pathname === '/') {
       gsap.fromTo(
         '.landing-photo-wrap',
@@ -90,9 +94,92 @@ export function SiteMotion() {
           }
         }
       );
+
+      landingRoll = document.querySelector<HTMLElement>('.landing-name-track');
+      if (landingRoll) {
+        landingRoll.classList.add('js-roll');
+        rollTween = gsap.to(landingRoll, {
+          xPercent: -50,
+          duration: 18,
+          ease: 'none',
+          repeat: -1
+        });
+
+        rollDirectionTrigger = ScrollTrigger.create({
+          trigger: '.landing-hero',
+          start: 'top top',
+          end: 'bottom top',
+          onUpdate(self) {
+            const direction = self.direction === 1 ? 1 : -1;
+            if (rollTween) {
+              gsap.to(rollTween, { timeScale: direction, duration: 0.25, overwrite: true });
+            }
+          }
+        });
+
+        gsap.fromTo(
+          '.home-footer-arrow',
+          { rotate: 16 },
+          {
+            rotate: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.home-footer',
+              start: 'top bottom',
+              end: 'bottom bottom',
+              scrub: 0
+            }
+          }
+        );
+      }
+    }
+
+    const magnets = Array.from(document.querySelectorAll<HTMLElement>('[data-magnetic]'));
+    const removeMagnetHandlers: Array<() => void> = [];
+
+    if (window.innerWidth > 540) {
+      magnets.forEach((magnet) => {
+        const strength = Number(magnet.dataset.strength ?? 25);
+        const textStrength = Number(magnet.dataset.strengthText ?? 15);
+        const textTarget = magnet.querySelector<HTMLElement>('[data-magnetic-text]');
+
+        const onMove = (event: MouseEvent) => {
+          const bounds = magnet.getBoundingClientRect();
+          const x = ((event.clientX - bounds.left) / magnet.offsetWidth - 0.5) * strength;
+          const y = ((event.clientY - bounds.top) / magnet.offsetHeight - 0.5) * strength;
+
+          gsap.to(magnet, { x, y, duration: 1.5, ease: 'power4.out' });
+          if (textTarget) {
+            gsap.to(textTarget, {
+              x: ((event.clientX - bounds.left) / magnet.offsetWidth - 0.5) * textStrength,
+              y: ((event.clientY - bounds.top) / magnet.offsetHeight - 0.5) * textStrength,
+              duration: 1.5,
+              ease: 'power4.out'
+            });
+          }
+        };
+
+        const onLeave = () => {
+          gsap.to(magnet, { x: 0, y: 0, duration: 1.5, ease: 'elastic.out(1, 0.4)' });
+          if (textTarget) {
+            gsap.to(textTarget, { x: 0, y: 0, duration: 1.5, ease: 'elastic.out(1, 0.4)' });
+          }
+        };
+
+        magnet.addEventListener('mousemove', onMove);
+        magnet.addEventListener('mouseleave', onLeave);
+        removeMagnetHandlers.push(() => {
+          magnet.removeEventListener('mousemove', onMove);
+          magnet.removeEventListener('mouseleave', onLeave);
+        });
+      });
     }
 
     return () => {
+      removeMagnetHandlers.forEach((dispose) => dispose());
+      rollDirectionTrigger?.kill();
+      rollTween?.kill();
+      landingRoll?.classList.remove('js-roll');
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [pathname]);
