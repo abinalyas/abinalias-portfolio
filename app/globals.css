@@ -755,8 +755,13 @@ main {
 }
 
 .home-footer::before {
-  top: -4.8rem;
-  height: 6.2rem;
+  top: -6.2rem;
+  left: 50%;
+  width: 140%;
+  height: 7.6rem;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
 }
 
 .home-footer-wrap {
