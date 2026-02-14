@@ -44,16 +44,15 @@ export function HomeFooterSection() {
     <section className="contact-dark home-footer section" data-page-body>
       <div className="container home-footer-wrap">
         <div className="home-footer-head">
-          <div className="home-footer-title-row">
-            <div className="home-footer-avatar" aria-hidden="true">
-              <Image src="/hero/abin-portrait.png" alt="" width={152} height={152} />
-            </div>
-            <h2>
+          <h2>
+            <span className="home-footer-line">
+              <span className="home-footer-avatar" aria-hidden="true">
+                <Image src="/hero/abin-portrait.png" alt="" width={152} height={152} />
+              </span>
               Let&apos;s work
-              <br />
-              together
-            </h2>
-          </div>
+            </span>
+            <span>together</span>
+          </h2>
           <div className="home-footer-action">
             <span className="home-footer-arrow" aria-hidden="true">
               ↙
