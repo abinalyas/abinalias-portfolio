@@ -76,21 +76,6 @@ export function SiteMotion() {
       );
 
       gsap.fromTo(
-        '.landing-name span',
-        { xPercent: 0 },
-        {
-          xPercent: -13,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.landing-hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1
-          }
-        }
-      );
-
-      gsap.fromTo(
         '.landing-meta',
         { y: 0, opacity: 1 },
         {

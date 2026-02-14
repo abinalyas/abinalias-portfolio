@@ -5,9 +5,18 @@ import Image from 'next/image';
 export function LandingHero() {
   return (
     <section className="landing-hero" aria-label="Intro">
-      <div className="landing-top container">
-        <p className="landing-kicker">Interaction & Development</p>
-      </div>
+      <aside className="landing-location" data-page-body>
+        <p>
+          Located
+          <br />
+          in the
+          <br />
+          United States
+        </p>
+        <span className="landing-location-icon" aria-hidden="true">
+          ◎
+        </span>
+      </aside>
 
       <div className="landing-photo-wrap" data-card-reveal>
         <Image
@@ -30,7 +39,10 @@ export function LandingHero() {
       </div>
 
       <div className="landing-name" data-page-title>
-        <span>Abin Alias</span>
+        <div className="landing-name-track">
+          <span>Abin Alias — Abin Alias — </span>
+          <span aria-hidden="true">Abin Alias — Abin Alias — </span>
+        </div>
       </div>
     </section>
   );

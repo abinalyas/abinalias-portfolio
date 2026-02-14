@@ -126,19 +126,6 @@ main {
   border-top: 4px solid #223c2f;
 }
 
-.landing-top {
-  position: relative;
-  z-index: 3;
-  padding-top: 2rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.landing-kicker {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
 .landing-photo-wrap {
   position: absolute;
   bottom: 0;
@@ -179,8 +166,8 @@ main {
 
 .landing-name {
   position: absolute;
-  left: -0.02em;
-  right: -0.02em;
+  left: 0;
+  right: 0;
   bottom: -0.04em;
   z-index: 3;
   font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
@@ -188,13 +175,56 @@ main {
   letter-spacing: -0.045em;
   color: #f3f3f3;
   line-height: 0.82;
-  white-space: nowrap;
   pointer-events: none;
+  overflow: hidden;
 }
 
-.landing-name span {
-  display: inline-block;
+.landing-name-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
   will-change: transform;
+  animation: landing-marquee 18s linear infinite;
+}
+
+.landing-name-track span {
+  display: inline-block;
+  padding-right: 0.25em;
+  will-change: transform;
+}
+
+.landing-location {
+  position: absolute;
+  left: 0;
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 6;
+  min-width: 17rem;
+  padding: 0.9rem 1rem 0.9rem 1.3rem;
+  border-radius: 999px;
+  background: #12161d;
+  color: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.landing-location p {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.landing-location-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  background: #2a313d;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
 }
 
 .work-hover-shell {
@@ -439,10 +469,6 @@ main {
 }
 
 @media (max-width: 900px) {
-  .landing-top {
-    justify-content: flex-start;
-  }
-
   .landing-photo-wrap {
     width: min(90vw, 470px);
     height: min(62vh, 580px);
@@ -465,6 +491,26 @@ main {
     bottom: 0.3rem;
   }
 
+  .landing-name-track {
+    animation-duration: 13s;
+  }
+
+  .landing-location {
+    min-width: 12rem;
+    padding: 0.65rem 0.7rem 0.65rem 0.9rem;
+    top: 56%;
+  }
+
+  .landing-location p {
+    font-size: 1rem;
+  }
+
+  .landing-location-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+
   .work-hover-shell {
     cursor: auto;
   }
@@ -476,5 +522,14 @@ main {
 
   .work-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@keyframes landing-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
