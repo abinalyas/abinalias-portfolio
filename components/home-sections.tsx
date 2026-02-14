@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function HomeLightSections() {
   return (
@@ -40,31 +41,36 @@ export function HomeCapabilitiesSection() {
 
 export function HomeFooterSection() {
   return (
-    <section className="contact-dark section" data-page-body>
-      <div className="container contact-dark-grid">
-        <div>
-          <h2>Let&apos;s start a project together</h2>
-          <Link href="mailto:hello@abinalias.com" className="contact-dark-mail">
-            hello@abinalias.com
-          </Link>
+    <section className="contact-dark home-footer section" data-page-body>
+      <div className="container home-footer-wrap">
+        <div className="home-footer-head">
+          <div className="home-footer-title-row">
+            <div className="home-footer-avatar" aria-hidden="true">
+              <Image src="/hero/abin-portrait.png" alt="" width={152} height={152} />
+            </div>
+            <h2>
+              Let&apos;s work
+              <br />
+              together
+            </h2>
+          </div>
+          <div className="home-footer-action">
+            <span className="home-footer-arrow" aria-hidden="true">
+              ↙
+            </span>
+            <Link href="/contact" className="home-footer-orb">
+              Get in touch
+            </Link>
+          </div>
         </div>
-        <div className="contact-dark-cols">
-          <div>
-            <h4>Navigation</h4>
-            <Link href="/">Home</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-          <div>
-            <h4>Socials</h4>
-            <a href="https://www.linkedin.com/in/abinalias/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a href="https://www.instagram.com/abin_lissy_alias/" target="_blank" rel="noreferrer">
-              Instagram
-            </a>
-          </div>
+        <div className="home-footer-divider" />
+        <div className="home-footer-chips">
+          <a href="mailto:hello@abinalias.com" className="home-footer-chip">
+            hello@abinalias.com
+          </a>
+          <a href="tel:+919999900000" className="home-footer-chip">
+            +91 99999 00000
+          </a>
         </div>
       </div>
     </section>

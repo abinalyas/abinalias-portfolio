@@ -749,6 +749,108 @@ main {
   color: #f1f3f7;
 }
 
+.home-footer {
+  padding-top: calc(var(--section-padding) * 0.62);
+  padding-bottom: calc(var(--section-padding) * 0.58);
+}
+
+.home-footer::before {
+  top: -4.8rem;
+  height: 6.2rem;
+}
+
+.home-footer-wrap {
+  display: grid;
+  gap: clamp(1.4rem, 2.6vw, 2.2rem);
+}
+
+.home-footer-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(1.5rem, 3vw, 2.6rem);
+}
+
+.home-footer-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.1rem, 1.7vw, 1.8rem);
+}
+
+.home-footer-avatar {
+  width: clamp(3.8rem, 5.2vw, 5.8rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 0.45rem;
+}
+
+.home-footer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-footer h2 {
+  margin: 0;
+  max-width: 8ch;
+  font-size: clamp(3.6rem, 9.1vw, 8.7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.home-footer-action {
+  display: grid;
+  justify-items: center;
+  gap: 1.2rem;
+  padding-bottom: 0.55rem;
+}
+
+.home-footer-arrow {
+  font-size: clamp(1.4rem, 2.1vw, 2.3rem);
+  line-height: 1;
+  color: #edf1fb;
+}
+
+.home-footer-orb {
+  width: clamp(8.8rem, 12.3vw, 12.2rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: #4a5eff;
+  color: #f7f8ff;
+  display: grid;
+  place-items: center;
+  font-size: clamp(0.9rem, 1vw, 1.15rem);
+  transition: transform 0.24s ease;
+}
+
+.home-footer-orb:hover {
+  transform: scale(1.04);
+}
+
+.home-footer-divider {
+  border-top: 1px solid rgba(139, 147, 167, 0.3);
+}
+
+.home-footer-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.home-footer-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(139, 147, 167, 0.38);
+  color: #eff2f7;
+  border-radius: 999px;
+  min-height: 3.2rem;
+  padding: 0.7rem 1.8rem;
+  font-size: clamp(0.95rem, 1vw, 1.15rem);
+}
+
 .contact-page {
   position: relative;
   min-height: 100svh;
@@ -1159,6 +1261,20 @@ main {
 
   .contact-dark-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-footer-head {
+    grid-template-columns: 1fr;
+  }
+
+  .home-footer-action {
+    justify-items: start;
+    padding-bottom: 0;
+  }
+
+  .home-footer h2 {
+    max-width: 9.2ch;
+    font-size: clamp(2.7rem, 14vw, 5rem);
   }
 
   .contact-page-grid {
