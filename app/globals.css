@@ -297,39 +297,64 @@ main {
 
 .gallery-section {
   background: #efefef;
-  padding: 0 0 5rem;
+  padding: 0 0 6rem;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 1.8rem);
+  gap: clamp(1rem, 1.8vw, 1.6rem);
 }
 
 .gallery-card {
-  background: #d9d9dd;
-  padding: clamp(1rem, 1.6vw, 1.35rem);
-  transition: transform 0.35s ease;
+  padding: clamp(1rem, 1.55vw, 1.3rem);
+  transition: box-shadow 0.28s ease;
+  will-change: transform;
+}
+
+.gallery-card[data-tone="a"] {
+  background: #d6d6db;
+}
+
+.gallery-card[data-tone="b"] {
+  background: #cfd0d8;
+}
+
+.gallery-card[data-tone="c"] {
+  background: #dddcd8;
+}
+
+.gallery-card[data-tone="d"] {
+  background: #cad6df;
+}
+
+.gallery-card[data-tone="e"] {
+  background: #dbd8da;
+}
+
+.gallery-card[data-tone="f"] {
+  background: #d2d1cd;
 }
 
 .gallery-frame {
   overflow: hidden;
+  background: #ffffff;
 }
 
 .gallery-image {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(1.01);
-  transition: transform 0.5s ease;
-}
-
-.gallery-card:hover {
-  transform: translateY(-6px);
+  transform: scale(1.005);
+  transition: transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .gallery-card:hover .gallery-image {
-  transform: scale(1.06);
+  transform: scale(1.065);
+}
+
+.gallery-card:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
 }
 
 .hover-preview {
