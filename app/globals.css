@@ -295,6 +295,43 @@ main {
   color: #f7f7f7;
 }
 
+.gallery-section {
+  background: #efefef;
+  padding: 0 0 5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.8rem);
+}
+
+.gallery-card {
+  background: #d9d9dd;
+  padding: clamp(1rem, 1.6vw, 1.35rem);
+  transition: transform 0.35s ease;
+}
+
+.gallery-frame {
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-card:hover .gallery-image {
+  transform: scale(1.06);
+}
+
 .hover-preview {
   position: fixed;
   top: 0;
@@ -729,6 +766,10 @@ main {
   }
 
   .cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 

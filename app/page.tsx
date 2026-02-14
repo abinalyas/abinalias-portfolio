@@ -3,6 +3,7 @@ import { caseStudies } from '@/lib/case-studies';
 import { LandingHero } from '@/components/landing-hero';
 import { WorkHoverList } from '@/components/work-hover-list';
 import { HomeSections } from '@/components/home-sections';
+import { GallerySection } from '@/components/gallery-section';
 
 export default function HomePage() {
   return (
@@ -34,6 +35,7 @@ export default function HomePage() {
       </section>
 
       <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
+      <GallerySection />
 
       <HomeSections />
     </>

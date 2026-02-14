@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 820'>
+  <rect width='1200' height='820' fill='#d2dde3'/>
+  <rect x='80' y='70' width='1040' height='680' fill='#1f2638'/>
+  <rect x='600' y='70' width='520' height='680' fill='#1f9bd8'/>
+  <text x='350' y='470' font-size='82' fill='#e6f0ff' font-family='Arial'>Startpoint</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 820'>
+  <rect width='1200' height='820' fill='#d9d9dd'/>
+  <rect x='80' y='70' width='1040' height='680' fill='#1f2435'/>
+  <text x='150' y='180' font-size='62' fill='#f2f2f3' font-family='Arial'>Powertrain Timeline</text>
+  <rect x='150' y='260' width='900' height='10' fill='#4f5678'/>
+  <rect x='150' y='350' width='760' height='10' fill='#4f5678'/>
+  <rect x='150' y='440' width='620' height='10' fill='#4f5678'/>
+</svg>

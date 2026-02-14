@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 820'>
+  <rect width='1200' height='820' fill='#dedbdd'/>
+  <rect x='80' y='70' width='1040' height='680' fill='#f8f8f8'/>
+  <rect x='80' y='70' width='1040' height='120' fill='#ffffff'/>
+  <text x='140' y='145' font-size='44' fill='#20232a' font-family='Arial'>Dope Store UI</text>
+  <rect x='130' y='230' width='940' height='460' fill='#f1f1f1'/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 820'>
+  <rect width='1200' height='820' fill='#d5d4d1'/>
+  <rect x='80' y='70' width='1040' height='680' fill='#0b0b0d'/>
+  <rect x='280' y='250' width='110' height='210' fill='#22314f'/>
+  <rect x='430' y='220' width='110' height='240' fill='#3a4b63'/>
+  <rect x='580' y='260' width='110' height='200' fill='#5a6e88'/>
+  <rect x='730' y='240' width='110' height='220' fill='#7f8da3'/>
+  <text x='470' y='560' font-size='54' fill='#f2f2f2' font-family='Arial'>W E S T</text>
+</svg>
