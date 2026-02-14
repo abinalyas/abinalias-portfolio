@@ -118,6 +118,14 @@ main {
   background: rgba(255, 255, 255, 0.94);
 }
 
+.header-dark {
+  color: rgba(241, 244, 250, 0.92);
+}
+
+.header-dark .nav-link::after {
+  background: rgba(241, 244, 250, 0.92);
+}
+
 .landing-hero {
   position: relative;
   min-height: 100svh;
@@ -693,49 +701,104 @@ main {
 .contact-page {
   position: relative;
   min-height: 100svh;
-  background: #111622;
+  background: #151721;
   color: #eff2f7;
-  padding: clamp(7rem, 10vw, 10rem) 0 clamp(4rem, 7vw, 7rem);
+  padding: clamp(7rem, 10vw, 10rem) 0 clamp(2.5rem, 5vw, 4.2rem);
   overflow: hidden;
 }
 
 .contact-page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 7vw, 8rem);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: start;
 }
 
-.contact-page-kicker {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.82rem;
-  color: #9da5b8;
+.contact-form-side {
+  min-width: 0;
 }
 
-.contact-page-title {
-  margin: 0.9rem 0 0;
-  max-width: 12ch;
-  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
-  font-size: clamp(2.2rem, 5.6vw, 6rem);
-  letter-spacing: -0.03em;
-  line-height: 1.02;
+.contact-form {
+  border-top: 1px solid rgba(139, 147, 167, 0.27);
 }
 
-.contact-page-mail {
-  display: inline-block;
-  margin-top: 2rem;
-  color: #d8dfef;
-  border-bottom: 1px solid #7e8ba9;
-  padding-bottom: 0.18rem;
+.contact-row {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 1.1rem;
+  border-bottom: 1px solid rgba(139, 147, 167, 0.27);
+  padding: 1.6rem 0 1.65rem;
+}
+
+.contact-row-message {
+  min-height: 20rem;
+}
+
+.contact-index {
+  color: #7e879f;
+  font-size: 0.85rem;
+  padding-top: 0.35rem;
+}
+
+.contact-question {
+  display: block;
+  font-size: clamp(1.25rem, 1.9vw, 2.2rem);
+  color: #f3f5f9;
+  margin-bottom: 0.75rem;
+}
+
+.contact-content input,
+.contact-content textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #eff2f7;
+  font-size: clamp(1.28rem, 2vw, 2rem);
+  font-family: "Satoshi", "Manrope", sans-serif;
+  padding: 0;
+}
+
+.contact-content input::placeholder,
+.contact-content textarea::placeholder {
+  color: rgba(224, 228, 239, 0.35);
+}
+
+.contact-content textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-submit-wrap {
+  border-bottom: 1px solid rgba(139, 147, 167, 0.27);
+  min-height: 11rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact-submit-orb {
+  width: clamp(8rem, 12vw, 10.5rem);
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: 999px;
+  background: #4a5eff;
+  color: #f7f8ff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.contact-submit-orb:hover {
+  transform: scale(1.05);
 }
 
 .contact-page-cols {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
   align-content: start;
-  padding-top: clamp(0rem, 3vw, 1.5rem);
+  padding-top: 0.4rem;
 }
 
 .contact-page-cols h4 {
@@ -753,18 +816,28 @@ main {
   line-height: 1.6;
 }
 
-.contact-page-orb {
-  position: absolute;
-  right: clamp(1.2rem, 4vw, 4rem);
-  top: 42%;
-  width: clamp(4.7rem, 7vw, 6.2rem);
-  aspect-ratio: 1 / 1;
-  border-radius: 999px;
-  background: #3f50ff;
-  color: #fff;
+.contact-arrow {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  color: #dce1ed;
+  font-size: 1.7rem;
+}
+
+.contact-bottom-meta {
   display: grid;
-  place-items: center;
-  font-size: 0.95rem;
+  grid-template-columns: auto auto 1fr;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+  color: #9da5b8;
+  font-size: 0.82rem;
+}
+
+.contact-bottom-meta div p {
+  margin: 0.24rem 0;
+}
+
+.contact-bottom-meta div p:last-child {
+  color: #eff2f7;
 }
 
 .kicker {
@@ -979,12 +1052,17 @@ main {
   }
 
   .contact-page-cols {
-    grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 
-  .contact-page-orb {
-    top: auto;
-    bottom: 2rem;
+  .contact-bottom-meta {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-submit-wrap {
+    justify-content: flex-start;
+    min-height: 8rem;
   }
 }
 

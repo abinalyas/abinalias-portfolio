@@ -2,28 +2,69 @@ export default function ContactPage() {
   return (
     <section className="contact-page" data-page-body>
       <div className="container contact-page-grid">
-        <div>
-          <p className="contact-page-kicker" data-page-kicker>
-            Contact
-          </p>
-          <h1 className="contact-page-title" data-page-title>
-            Let&apos;s start a project together
-          </h1>
-          <a href="mailto:hello@abinalias.com" className="contact-page-mail">
-            hello@abinalias.com
-          </a>
+        <div className="contact-form-side">
+          <form className="contact-form" action="#" method="post">
+            <label className="contact-row">
+              <span className="contact-index">01</span>
+              <span className="contact-content">
+                <span className="contact-question">What&apos;s your name?</span>
+                <input type="text" name="name" placeholder="John Doe *" />
+              </span>
+            </label>
+
+            <label className="contact-row">
+              <span className="contact-index">02</span>
+              <span className="contact-content">
+                <span className="contact-question">What&apos;s your email?</span>
+                <input type="email" name="email" placeholder="john@doe.com *" />
+              </span>
+            </label>
+
+            <label className="contact-row">
+              <span className="contact-index">03</span>
+              <span className="contact-content">
+                <span className="contact-question">What&apos;s the name of your organization?</span>
+                <input type="text" name="org" placeholder="John & Doe ®" />
+              </span>
+            </label>
+
+            <label className="contact-row">
+              <span className="contact-index">04</span>
+              <span className="contact-content">
+                <span className="contact-question">What services are you looking for?</span>
+                <input type="text" name="services" placeholder="Web Design, Web Development ..." />
+              </span>
+            </label>
+
+            <label className="contact-row contact-row-message">
+              <span className="contact-index">05</span>
+              <span className="contact-content">
+                <span className="contact-question">Your message</span>
+                <textarea name="message" placeholder="Hello Abin, can you help me with ... *" />
+              </span>
+            </label>
+          </form>
+
+          <div className="contact-submit-wrap">
+            <button type="button" className="contact-submit-orb">
+              Send it!
+            </button>
+          </div>
         </div>
 
         <div className="contact-page-cols">
+          <span className="contact-arrow" aria-hidden="true">
+            ↘
+          </span>
           <div>
             <h4>Contact Details</h4>
-            <p>Kerala, India</p>
-            <p>Available for freelance and contract work.</p>
+            <p>hello@abinalias.com</p>
+            <p>+91 00000 00000</p>
           </div>
           <div>
             <h4>Business</h4>
-            <p>Project scope and timeline</p>
-            <p>Brand, website, product interface</p>
+            <p>Abin Alias Studio</p>
+            <p>Location: Kerala, India</p>
           </div>
           <div>
             <h4>Socials</h4>
@@ -36,8 +77,20 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      <div className="contact-page-orb" aria-hidden="true">
-        Start
+
+      <div className="container contact-bottom-meta">
+        <div>
+          <p>Version</p>
+          <p>2026 © Edition</p>
+        </div>
+        <div>
+          <p>Local Time</p>
+          <p>05:43 PM IST</p>
+        </div>
+        <div>
+          <p>Socials</p>
+          <p>Awwwards · Instagram · Twitter · LinkedIn</p>
+        </div>
       </div>
     </section>
   );
