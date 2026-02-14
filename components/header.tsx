@@ -11,9 +11,12 @@ const links = [
 
 export function Header() {
   const pathname = usePathname();
-  const normalizedPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
-  const isHome = normalizedPath === '/';
-  const isContact = normalizedPath === '/contact';
+  const trimmed = pathname.replace(/\/+$/, '');
+  const segments = trimmed.split('/').filter(Boolean);
+  const last = segments[segments.length - 1] ?? '';
+  const pageSlug = ['work', 'about', 'contact'].includes(last) ? last : 'home';
+  const isHome = pageSlug === 'home';
+  const isContact = pageSlug === 'contact';
 
   return (
     <header className={`site-header ${isHome ? 'header-home' : ''} ${isContact ? 'header-dark' : ''}`}>
@@ -27,7 +30,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className="nav-link text-sm sm:text-base"
-              data-active={normalizedPath === link.href}
+              data-active={pageSlug === link.href.replace('/', '')}
             >
               {link.label}
             </Link>

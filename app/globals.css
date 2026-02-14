@@ -289,7 +289,7 @@ main {
 .work-row h2 {
   margin: 0;
   font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
-  font-size: clamp(2rem, 5vw, 5.2rem);
+  font-size: clamp(2rem, 4.3vw, 4.6rem);
   letter-spacing: -0.03em;
   color: #1b1b1b;
   transition: color 0.25s ease, opacity 0.25s ease;
@@ -331,12 +331,16 @@ main {
 
 .gallery-section {
   background: #efefef;
-  padding: 0 0 6rem;
+  padding: 1.2rem 0 7rem;
 }
 
 .gallery-row-wrap {
-  overflow: hidden;
+  overflow: clip;
   padding: 0.75rem 0;
+}
+
+.gallery-row-wrap + .gallery-row-wrap {
+  margin-top: 0.8rem;
 }
 
 .gallery-row {
@@ -357,7 +361,7 @@ main {
 }
 
 .gallery-card {
-  flex: 0 0 clamp(22rem, 31vw, 34rem);
+  flex: 0 0 clamp(20rem, 28vw, 31rem);
   padding: clamp(1rem, 1.55vw, 1.3rem);
   transition: box-shadow 0.28s ease;
   will-change: transform;
@@ -511,8 +515,9 @@ main {
 .manifesto-title {
   margin: 0;
   font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
-  font-size: clamp(2rem, 5vw, 5.6rem);
-  line-height: 1.06;
+  max-width: 16ch;
+  font-size: clamp(2rem, 4.1vw, 4.2rem);
+  line-height: 1.12;
   letter-spacing: -0.03em;
   color: #17191e;
 }
@@ -681,6 +686,19 @@ main {
   background: #121722;
   color: #f1f3f7;
   margin-top: 2rem;
+  position: relative;
+}
+
+.contact-dark::before {
+  content: "";
+  position: absolute;
+  top: -5.5rem;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background: #efefef;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
 }
 
 .contact-dark-grid {
