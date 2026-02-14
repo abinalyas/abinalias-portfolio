@@ -498,6 +498,47 @@ main {
   transform: scale(1.05);
 }
 
+.about-hero {
+  padding-top: clamp(6rem, 10vw, 9rem);
+}
+
+.about-hero-title {
+  margin: 1.2rem 0 0;
+  max-width: 15ch;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 6.2rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.about-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 4vw, 4rem);
+  align-items: start;
+  padding-top: 1rem;
+}
+
+.about-profile-image {
+  width: 100%;
+  height: auto;
+  background: #d5d7db;
+}
+
+.about-profile-meta h2 {
+  margin: 0;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(1.6rem, 2.8vw, 3rem);
+  letter-spacing: -0.02em;
+}
+
+.about-profile-meta p {
+  margin: 1.2rem 0 0;
+  max-width: 45ch;
+  color: #4f4f4f;
+  line-height: 1.7;
+}
+
 .impact-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -784,6 +825,10 @@ main {
   .manifesto-about {
     width: 9rem;
     margin-top: 1.5rem;
+  }
+
+  .about-profile {
+    grid-template-columns: 1fr;
   }
 
   .impact-section {
