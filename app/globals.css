@@ -690,6 +690,83 @@ main {
   color: #f1f3f7;
 }
 
+.contact-page {
+  position: relative;
+  min-height: 100svh;
+  background: #111622;
+  color: #eff2f7;
+  padding: clamp(7rem, 10vw, 10rem) 0 clamp(4rem, 7vw, 7rem);
+  overflow: hidden;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 7vw, 8rem);
+}
+
+.contact-page-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  color: #9da5b8;
+}
+
+.contact-page-title {
+  margin: 0.9rem 0 0;
+  max-width: 12ch;
+  font-family: "Clash Grotesk", "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 5.6vw, 6rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.contact-page-mail {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #d8dfef;
+  border-bottom: 1px solid #7e8ba9;
+  padding-bottom: 0.18rem;
+}
+
+.contact-page-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+  align-content: start;
+  padding-top: clamp(0rem, 3vw, 1.5rem);
+}
+
+.contact-page-cols h4 {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9da5b8;
+  font-size: 0.75rem;
+}
+
+.contact-page-cols p,
+.contact-page-cols a {
+  margin: 0.45rem 0;
+  color: #f1f3f7;
+  line-height: 1.6;
+}
+
+.contact-page-orb {
+  position: absolute;
+  right: clamp(1.2rem, 4vw, 4rem);
+  top: 42%;
+  width: clamp(4.7rem, 7vw, 6.2rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: #3f50ff;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+}
+
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -895,6 +972,19 @@ main {
 
   .contact-dark-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page-orb {
+    top: auto;
+    bottom: 2rem;
   }
 }
 
