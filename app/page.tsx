@@ -18,9 +18,6 @@ export default function HomePage() {
                 Helping brands to stand out in the digital era. Together we set a bold new standard with no
                 over-complication, always focused on craft and clarity.
               </h2>
-              <p className="manifesto-kicker" data-page-body>
-                Recent work
-              </p>
             </div>
 
             <aside className="manifesto-aside" data-page-body>
@@ -35,7 +32,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showLabel={false} showMoreButton />
+        <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
         <GallerySection />
       </div>
 
