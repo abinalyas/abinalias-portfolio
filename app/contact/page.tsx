@@ -1,8 +1,17 @@
+import Image from 'next/image';
+
 export default function ContactPage() {
   return (
     <section className="contact-page" data-page-body>
       <div className="container contact-page-grid">
         <div className="contact-form-side">
+          <div className="contact-hero" data-page-title>
+            <h1>Let&apos;s start a project together</h1>
+            <div className="contact-hero-avatar" aria-hidden="true">
+              <Image src="/hero/abin-portrait.png" alt="" width={400} height={400} />
+            </div>
+          </div>
+
           <form className="contact-form" action="#" method="post">
             <label className="contact-row">
               <span className="contact-index">01</span>
