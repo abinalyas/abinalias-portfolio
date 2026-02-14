@@ -11,6 +11,7 @@ type Props = {
   title?: string;
   showHeading?: boolean;
   showMoreButton?: boolean;
+  showLabel?: boolean;
 };
 
 export function WorkHoverList({
@@ -18,7 +19,8 @@ export function WorkHoverList({
   label = 'Work',
   title = 'Selected projects',
   showHeading = true,
-  showMoreButton = false
+  showMoreButton = false,
+  showLabel = true
 }: Props) {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -65,11 +67,11 @@ export function WorkHoverList({
               {title}
             </h1>
           </>
-        ) : (
+        ) : showLabel ? (
           <p className="work-label" data-page-kicker>
             {label}
           </p>
-        )}
+        ) : null}
 
         <div className={`work-hover-list ${showHeading ? 'mt-10' : 'mt-4'}`} onMouseLeave={() => setActiveSlug(null)}>
           {studies.map((study) => {

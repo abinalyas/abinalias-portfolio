@@ -35,7 +35,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
+        <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showLabel={false} showMoreButton />
         <GallerySection />
       </div>
 
