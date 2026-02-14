@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { caseStudies } from '@/lib/case-studies';
 import { LandingHero } from '@/components/landing-hero';
 import { WorkHoverList } from '@/components/work-hover-list';
-import { HomeSections } from '@/components/home-sections';
+import { HomeCapabilitiesSection, HomeFooterSection, HomeLightSections } from '@/components/home-sections';
 import { GallerySection } from '@/components/gallery-section';
 
 export default function HomePage() {
@@ -10,34 +10,38 @@ export default function HomePage() {
     <>
       <LandingHero />
 
-      <section className="manifesto-section section">
-        <div className="container manifesto-grid">
-          <div>
-            <h2 className="manifesto-title" data-page-title>
-              Helping brands to stand out in the digital era. Together we set a bold new standard with no
-              over-complication, always focused on craft and clarity.
-            </h2>
-            <p className="manifesto-kicker" data-page-body>
-              Recent work
-            </p>
+      <div className="home-light-surface">
+        <section className="manifesto-section section">
+          <div className="container manifesto-grid">
+            <div>
+              <h2 className="manifesto-title" data-page-title>
+                Helping brands to stand out in the digital era. Together we set a bold new standard with no
+                over-complication, always focused on craft and clarity.
+              </h2>
+              <p className="manifesto-kicker" data-page-body>
+                Recent work
+              </p>
+            </div>
+
+            <aside className="manifesto-aside" data-page-body>
+              <p>
+                The combination of design, code, and interaction thinking positions your work in a unique place in
+                the digital world.
+              </p>
+              <Link href="/about" className="manifesto-about">
+                About me
+              </Link>
+            </aside>
           </div>
+        </section>
 
-          <aside className="manifesto-aside" data-page-body>
-            <p>
-              The combination of design, code, and interaction thinking positions your work in a unique place in the
-              digital world.
-            </p>
-            <Link href="/about" className="manifesto-about">
-              About me
-            </Link>
-          </aside>
-        </div>
-      </section>
+        <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
+        <GallerySection />
+        <HomeLightSections />
+        <HomeCapabilitiesSection />
+      </div>
 
-      <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
-      <GallerySection />
-
-      <HomeSections />
+      <HomeFooterSection />
     </>
   );
 }
