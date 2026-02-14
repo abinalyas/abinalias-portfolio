@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { caseStudies } from '@/lib/case-studies';
 import { LandingHero } from '@/components/landing-hero';
 import { WorkHoverList } from '@/components/work-hover-list';
-import { HomeCapabilitiesSection, HomeFooterSection, HomeLightSections } from '@/components/home-sections';
+import { HomeFooterSection } from '@/components/home-sections';
 import { GallerySection } from '@/components/gallery-section';
 
 export default function HomePage() {
@@ -37,8 +37,6 @@ export default function HomePage() {
 
         <WorkHoverList studies={caseStudies} label="Recent work" showHeading={false} showMoreButton />
         <GallerySection />
-        <HomeLightSections />
-        <HomeCapabilitiesSection />
       </div>
 
       <HomeFooterSection />
