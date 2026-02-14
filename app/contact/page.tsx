@@ -63,7 +63,7 @@ export default function ContactPage() {
 
         <div className="contact-page-cols">
           <div className="contact-side-avatar" aria-hidden="true">
-            <Image src="/hero/abin-portrait.png" alt="" width={400} height={400} />
+            <Image src="/reference/img/DSC07033-Cut-Color-1080.jpg" alt="" width={400} height={400} />
           </div>
           <span className="contact-arrow" aria-hidden="true">
             ↘

@@ -16,7 +16,7 @@ export default function AboutPage() {
       </section>
 
       <section className="section container about-profile" data-page-body>
-        <Image src="/hero/abin-portrait.png" alt="Abin Alias" width={760} height={980} className="about-profile-image" />
+        <Image src="/reference/img/DSC07033-Cut-Color-1080.jpg" alt="Abin Alias" width={760} height={980} className="about-profile-image" />
         <div className="about-profile-meta">
           <h2>Entrepreneur, Designer and Builder</h2>
           <p>

@@ -20,7 +20,7 @@ export function LandingHero() {
 
       <div className="landing-photo-wrap" data-card-reveal>
         <Image
-          src="/hero/abin-portrait.png"
+          src="/reference/img/DSC07033-Cut-Color-1080.jpg"
           alt="Abin Alias portrait"
           width={1200}
           height={1505}

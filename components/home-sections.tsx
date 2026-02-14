@@ -47,7 +47,7 @@ export function HomeFooterSection() {
           <h2>
             <span className="home-footer-line">
               <span className="home-footer-avatar" aria-hidden="true">
-                <Image src="/hero/abin-portrait.png" alt="" width={152} height={152} />
+                <Image src="/reference/img/DSC07033-Cut-Color-1080.jpg" alt="" width={152} height={152} />
               </span>
               Let&apos;s work
             </span>
