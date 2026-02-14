@@ -128,6 +128,45 @@ h6 {
   font-weight: 450;
 }
 
+h1 {
+  font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+  line-height: 1.065;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: calc(clamp(3.25em, 5vw, 4.5em) * 0.75);
+  line-height: 1.065;
+  margin-bottom: 0.66em;
+}
+
+h3 {
+  font-size: clamp(2.66em, 4.65vw, 5.32em);
+  line-height: 1.065;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: clamp(1.55em, 2.3vw, 2.5em);
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+
+h5 {
+  font-size: 0.6em;
+  line-height: 1.065;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.66;
+  margin-bottom: 1em;
+}
+
 .site-shell {
   min-height: 100dvh;
   display: flex;
