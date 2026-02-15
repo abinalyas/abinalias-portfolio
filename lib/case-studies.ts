@@ -2,6 +2,7 @@ export type CaseStudy = {
   slug: string;
   title: string;
   year: string;
+  location: string;
   role: string;
   stack: string[];
   category: string;
@@ -19,6 +20,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'find-rooms-roommates',
     title: 'Find Rooms & Roommates',
     year: '2021',
+    location: 'Kerala, India',
     role: 'Product Designer',
     stack: ['UX Strategy', 'UI Design', 'Prototyping'],
     category: 'Case Study',
@@ -33,6 +35,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'winzip-driver-app-redesign',
     title: 'Winzip Driver App Redesign',
     year: '2021',
+    location: 'Kerala, India',
     role: 'Product Designer',
     stack: ['Product Design', 'UX Research', 'Visual Systems'],
     category: 'Software Redesign',
@@ -47,6 +50,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'freshop',
     title: 'Freshop',
     year: '2021',
+    location: 'Kerala, India',
     role: 'Visual Designer',
     stack: ['Concept Design', 'Visual Design', 'Interaction Design'],
     category: 'Concept, Visual Design',

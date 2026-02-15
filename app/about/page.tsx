@@ -1,93 +1,134 @@
 import Image from 'next/image';
+import { HomeFooterSection } from '@/components/home-sections';
 
 export default function AboutPage() {
   return (
     <>
-      <section className="section container about-hero">
-        <span className="kicker" data-page-kicker>
-          About
-        </span>
-        <h1 className="about-hero-title" data-page-title>
-          Abin Alias
-        </h1>
-        <p className="about-hero-sub" data-page-body>
-          Entrepreneur, Designer and Builder
-        </p>
-      </section>
-
-      <section className="section container about-profile" data-page-body>
-        <Image src="/reference/img/DSC07033-Cut-Color-1080.jpg" alt="Abin Alias" width={760} height={980} className="about-profile-image" />
-        <div className="about-profile-meta">
-          <h2>Entrepreneur, Designer and Builder</h2>
-          <p>
-            A product person who always derive projects with the team. Collaborating with designers, managers and
-            developers to ensure we all thrive for the same goal with quality.
-          </p>
-          <p>
-            Always a human-centric approach. Building products around users needs is what I do. Mostly you will find
-            me being around the users, observing them, learning from them and crafting solutions.
-          </p>
-          <p>
-            I always love to learn. Let it be from a book, blog, videos or the people around me. As a designer, I
-            always tend to observe and learn. I believe growth comes with the urge of learning continuously.
-          </p>
-        </div>
-      </section>
-
-      <section className="section container about-quote" data-page-body>
-        <h2>Life is more fun with friends</h2>
-        <p>
-          “I am going to keep having fun every day I have left, because there is no other way of life. You just have
-          to decide whether you are a Tigger or an Eeyore.” — Randy Pausch
-        </p>
-      </section>
-
-      <section className="section container capabilities-section" data-page-body>
-        <p className="cap-intro">I can help you with:</p>
-        <div className="cap-grid">
-          <div>
-            <h3>Design</h3>
-            <p>Product UX, interfaces, and design systems with clean visual hierarchy.</p>
-          </div>
-          <div>
-            <h3>Development</h3>
-            <p>Frontend architecture and implementation with performance-first standards.</p>
-          </div>
-          <div>
-            <h3>The full package</h3>
-            <p>From strategy to launch, delivering one cohesive experience end to end.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact-dark section" data-page-body>
-        <div className="container contact-dark-grid">
-          <div>
-            <h2>Let&apos;s start a project together</h2>
-            <a href="mailto:hello@abinalias.com" className="contact-dark-mail">
-              hello@abinalias.com
-            </a>
-          </div>
-          <div className="contact-dark-cols">
-            <div>
-              <h4>Navigation</h4>
-              <a href="/">Home</a>
-              <a href="/work">Work</a>
-              <a href="/about">About</a>
-              <a href="/contact">Contact</a>
-            </div>
-            <div>
-              <h4>Socials</h4>
-              <a href="https://www.linkedin.com/in/abinalias/" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a href="https://www.instagram.com/abin_lissy_alias/" target="_blank" rel="noreferrer">
-                Instagram
-              </a>
+      <section className="section default-header about-header" data-page-title>
+        <div className="container medium">
+          <div className="row">
+            <div className="flex-col">
+              <h1>
+                <span>Helping brands thrive</span>
+                <span>in the digital world</span>
+              </h1>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="section no-padding line-globe" data-page-body>
+        <div className="container medium">
+          <div className="row">
+            <div className="flex-col">
+              <div className="stripe" />
+              <div className="digital-ball" aria-hidden="true">
+                <div className="globe-wrap">
+                  <span className="circle" />
+                  <span className="circle" />
+                  <span className="circle" />
+                  <span className="circle-hor" />
+                  <span className="circle-hor-middle" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-image" data-page-body>
+        <div className="container">
+          <div className="row">
+            <div className="flex-col">
+              <div className="arrow">↘</div>
+              <p>
+                I help companies from all over the world with tailor-made solutions. With each project, I push my
+                work to new horizons, always putting quality first.
+              </p>
+              <p>
+                <span className="about-fade">Always exploring...</span>
+              </p>
+            </div>
+            <div className="flex-col">
+              <div className="single-about-image">
+                <Image
+                  src="/reference/img/DSC07033-Cut-Color-1080.jpg"
+                  alt="Abin Alias portrait"
+                  width={860}
+                  height={1080}
+                  className="about-main-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-services" data-page-body>
+        <div className="container">
+          <div className="row">
+            <div className="flex-col">
+              <h2>I can help you with ...</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="flex-col">
+              <h5>01</h5>
+              <div className="stripe" />
+              <h4>Design</h4>
+              <p>
+                Product and interface design systems focused on user behavior, clarity, and visual consistency across
+                the full journey.
+              </p>
+            </div>
+            <div className="flex-col">
+              <h5>02</h5>
+              <div className="stripe" />
+              <h4>Development</h4>
+              <p>
+                Performance-first frontend development with clean architecture, smooth interactions, and robust
+                responsive behavior.
+              </p>
+            </div>
+            <div className="flex-col">
+              <h5>03</h5>
+              <div className="stripe" />
+              <h4>The full package</h4>
+              <p>
+                End-to-end collaboration from concept to launch, combining strategy, design, and implementation in one
+                cohesive workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-awwwards" data-page-body>
+        <div className="container medium">
+          <div className="row">
+            <div className="flex-col">
+              <div className="single-image">
+                <Image
+                  src="/reference/img/DSC07033-Cut-Color-1080.jpg"
+                  alt="Abin Alias profile"
+                  width={560}
+                  height={720}
+                  className="about-awards-image"
+                />
+              </div>
+            </div>
+            <div className="flex-col">
+              <h2>Awwwards judge &apos;19-25</h2>
+              <p>
+                I am a proud member of the Awwwards International Jury, where I evaluate outstanding websites with a
+                strong focus on interaction quality and frontend craft.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <HomeFooterSection />
     </>
   );
 }
