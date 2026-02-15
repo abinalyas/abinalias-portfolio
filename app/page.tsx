@@ -12,7 +12,7 @@ export default function HomePage() {
 
       <div className="home-light-surface">
         <section className="manifesto-section section">
-          <div className="container manifesto-grid">
+          <div className="container medium manifesto-grid">
             <div>
               <h2 className="manifesto-title" data-page-title>
                 Helping brands to stand out in the digital era. Together we set a bold new standard with no
