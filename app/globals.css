@@ -996,15 +996,14 @@ main {
 }
 
 .home-footer-wrap {
+  position: relative;
   display: grid;
   gap: clamp(1.1rem, 2vw, 1.8rem);
 }
 
 .home-footer-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(1.2rem, 2.4vw, 2.1rem);
+  position: relative;
+  padding-bottom: calc(var(--section-padding) * 0.475);
 }
 
 .home-footer-avatar {
@@ -1026,10 +1025,9 @@ main {
 
 .home-footer h2 {
   margin: 0;
-  max-width: 8.5ch;
-  font-size: clamp(2.95rem, 7.5vw, 7.1rem);
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+  line-height: 1.065;
+  letter-spacing: normal;
 }
 
 .home-footer h2 > span {
@@ -1039,13 +1037,18 @@ main {
 .home-footer-line {
   display: flex;
   align-items: flex-start;
+  white-space: nowrap;
 }
 
 .home-footer-action {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transform: translate(-50%, -50%);
   display: grid;
   justify-items: center;
-  gap: 1rem;
-  padding-bottom: 0.2rem;
+  gap: calc(var(--gap-padding) * 0.8);
+  z-index: 3;
 }
 
 .home-footer-arrow {
@@ -1081,7 +1084,7 @@ main {
 
 .home-footer-divider {
   border-top: 1px solid rgba(139, 147, 167, 0.3);
-  margin-top: 0.15rem;
+  margin-top: 0;
 }
 
 .home-footer-chips {
@@ -1092,6 +1095,8 @@ main {
 }
 
 .home-footer-chip {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1101,6 +1106,25 @@ main {
   min-height: 3rem;
   padding: 0.62rem 1.7rem;
   font-size: clamp(0.92rem, 0.95vw, 1.08rem);
+  z-index: 1;
+}
+
+.home-footer-chip::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 220%;
+  top: -60%;
+  left: -25%;
+  border-radius: 50%;
+  background: var(--color-blue);
+  transform: translate3d(0, -76%, 0);
+  transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: -1;
+}
+
+.home-footer-chip:hover::before {
+  transform: translate3d(0, 0, 0);
 }
 
 .contact-page {
