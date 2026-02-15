@@ -730,10 +730,10 @@ main {
 .manifesto-title {
   margin: 0;
   font-family: "Dennis Sans", sans-serif;
-  max-width: 17ch;
-  font-size: calc(clamp(3.25em, 5vw, 4.5em) * 0.75);
-  line-height: 1.18;
-  letter-spacing: -0.01em;
+  max-width: 19ch;
+  font-size: clamp(1.55em, 2.3vw, 2.5em);
+  line-height: 1.45;
+  letter-spacing: normal;
   color: #17191e;
 }
 
