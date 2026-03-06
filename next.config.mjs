@@ -4,7 +4,6 @@ const shouldUseBasePath = Boolean(process.env.GITHUB_ACTIONS) && !isUserOrOrgPag
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
